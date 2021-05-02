@@ -5,11 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
-import java.util.List;
-
-public class HelperForm extends HelperBase{
+public class HelperForm extends HelperBase {
     public HelperForm(WebDriver wd) {
         super(wd);
     }
@@ -23,13 +20,42 @@ public class HelperForm extends HelperBase{
         click(By.xpath("//span[.='Practice Form']"));
     }
 
-    public void fillForm(StudentForm model) {
-        type(By.id("firstName"),model.getFirstName());
-        type(By.id("lastName"),model.getLastName());
+    public void fillForm(StudentForm form) {
+        type(By.id("firstName"), form.getFirstName());
+        type(By.id("lastName"), form.getLastName());
+        type(By.id("userEmail"), form.getEmail());
+        selectGender(form.getGender());
+        type(By.id("userNumber"), form.getPhone());
+        typeBDay(form.getBirthday());
 
 
     }
 
+    private void typeBDay(String birthday) {
+        WebElement bday = wd.findElement(By.id("dateOfBirthInput"));
+        bday.click();
+        //click(By.id("dateOfBirthInput"));
+
+        String os = System.getProperty("os.name");
+        System.out.println(os);
+        if (os.startsWith("Mac")) {
+            bday.sendKeys(Keys.chord(Keys.COMMAND, "a"));
+        } else {
+            bday.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        }
+        bday.sendKeys(birthday);
+        bday.sendKeys(Keys.ENTER);
+    }
+
+    private void selectGender(String gender) {
+        if (gender.equals("Male")) {
+            click(By.id("gender-radio-1"));
+        } else if (gender.equals("Female")) {
+            click(By.id("gender-radio-2"));
+        } else {
+            click(By.id("gender-radio-3"));
+        }
+    }
 
 
 }
