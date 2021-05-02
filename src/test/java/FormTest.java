@@ -6,14 +6,14 @@ public class FormTest extends TestBase{
 
     @BeforeMethod
     public void preconditions(){
-        wd.findElement(By.xpath("//h5[.='Forms']")).click();
-        wd.findElement(By.xpath("//span[.='Practice Form']")).click();
+        app.form().selectItemForms();
+        app.form().selectPracticeForm();
+        app.form().hideFooter();
 
     }
     @Test
     public void formTest(){
-        typeByLocator(By.id("firstName"),"Lola");
-        typeByLocator(By.id("lastName"),"Now");
+        //app.form().fillForm();
     }
 
 
