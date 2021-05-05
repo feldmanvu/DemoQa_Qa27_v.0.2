@@ -13,57 +13,57 @@ public class StudentForm {
     String state;
     String city;
 
-    public StudentForm firstName(String firstName) {
+    public StudentForm withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public StudentForm lastName(String lastName) {
+    public StudentForm withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public StudentForm email(String email) {
+    public StudentForm withEmail(String email) {
         this.email = email;
         return this;
     }
 
-    public StudentForm gender(String gender) {
+    public StudentForm withGender(String gender) {
         this.gender = gender;
         return this;
     }
 
-    public StudentForm phone(String phone) {
+    public StudentForm withPhone(String phone) {
         this.phone = phone;
         return this;
     }
 
-    public StudentForm birthday(String birthday) {
+    public StudentForm withBirthday(String birthday) {
         this.birthday = birthday;
         return this;
     }
 
-    public StudentForm subject(String subject) {
+    public StudentForm withSubject(String subject) {
         this.subject = subject;
         return this;
     }
 
-    public StudentForm hobbies(String hobbies) {
+    public StudentForm withHobbies(String hobbies) {
         this.hobbies = hobbies;
         return this;
     }
 
-    public StudentForm address(String address) {
+    public StudentForm withAddress(String address) {
         this.address = address;
         return this;
     }
 
-    public StudentForm state(String state) {
+    public StudentForm witState(String state) {
         this.state = state;
         return this;
     }
 
-    public StudentForm city(String city) {
+    public StudentForm withCity(String city) {
         this.city = city;
         return this;
     }
