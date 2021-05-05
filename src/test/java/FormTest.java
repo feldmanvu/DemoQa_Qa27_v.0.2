@@ -13,7 +13,7 @@ public class FormTest extends TestBase {
 
     }
 
-    @Test
+    @Test()
     public void formTest() {
         StudentForm studentForm = new StudentForm()
                 .withFirstName("John")

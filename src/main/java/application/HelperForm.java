@@ -27,7 +27,8 @@ public class HelperForm extends HelperBase {
         type(By.id("userEmail"), form.getEmail());
         selectGender(form.getGender());
         type(By.id("userNumber"), form.getPhone());
-        typeBDay(form.getBirthday());
+        //typeBDay(form.getBirthday());
+        selectBDay(form.getBirthday());
         selectSubject(form.getSubject());
         selectHobbies(form.getHobbies());
         type(By.id("currentAddress"), form.getAddress());
@@ -106,8 +107,13 @@ public class HelperForm extends HelperBase {
     }
     private void selectBDay (String bday){
         // click by textbox bday
-        //select month
-        //select year
-        //select day
+        //select month [aprel]
+        //select year [1990]
+        //select day [26]
+
+    }
+    public void uploadPicture() {
+        wd.findElement(By.id("uploadPicture"))
+                .sendKeys("/Users/tayahatum/QA27/DemoQa_Qa27_v.0.2/girl.jpeg");
     }
 }
