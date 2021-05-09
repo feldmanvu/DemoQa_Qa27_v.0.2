@@ -6,7 +6,7 @@
 
         <classes>
 
-            <class name="QuckTest"/>
+            <class name="QuickTest"/>
         </classes>
     </test>
 

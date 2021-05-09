@@ -10,7 +10,7 @@
         <classes>
 
             <class name="SmokeTest"/>
-            <class name="QuckTest"/>
+            <class name="QuickTest"/>
             <class name="FormTest"/>
         </classes>
     </test>
